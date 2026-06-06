@@ -1,0 +1,254 @@
+{
+  "brand": {
+    "shortName": "Maisam Clinics",
+    "fullName": "Maisam Family Clinic",
+    "englishName": "Maisam Family Clinic"
+  },
+  "meta": {
+    "homeTitle": "Maisam Family Clinic",
+    "homeDescription": "Family healthcare with easy booking and flexible payment online or at the clinic.",
+    "pages": {
+      "services": {
+        "title": "Maisam Clinic Services",
+        "description": "Explore Maisam clinic services in a clear and simple experience."
+      },
+      "offers": {
+        "title": "Maisam Clinic Offers",
+        "description": "View featured medical offers when they become available."
+      },
+      "doctors": {
+        "title": "Maisam Clinic Doctors",
+        "description": "Meet Maisam doctors and their specialties."
+      },
+      "branches": {
+        "title": "Maisam Clinic Branches",
+        "description": "Choose the nearest branch and book easily."
+      },
+      "booking": {
+        "title": "Book Appointment",
+        "description": "Start booking your Maisam clinic appointment."
+      },
+      "appointments": {
+        "title": "My Appointments",
+        "description": "Track upcoming and previous Maisam appointments."
+      },
+      "invoices": {
+        "title": "Invoices",
+        "description": "View invoices and available payment options."
+      },
+      "complaints": {
+        "title": "Complaints and Feedback",
+        "description": "Share your feedback so we can improve your experience."
+      },
+      "profile": {
+        "title": "Account",
+        "description": "Manage your details and preferences inside Maisam Clinics App."
+      },
+      "admin": {
+        "title": "Admin Dashboard",
+        "description": "A future admin area for managing Maisam clinic services."
+      }
+    }
+  },
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "offers": "Offers",
+    "doctors": "Doctors",
+    "branches": "Branches",
+    "booking": "Book",
+    "appointments": "Appointments",
+    "invoices": "Invoices",
+    "complaints": "Complaints",
+    "profile": "Account",
+    "admin": "Admin"
+  },
+  "actions": {
+    "bookNow": "Book Now",
+    "bookAppointment": "Book Appointment",
+    "exploreServices": "Explore Services",
+    "switchLanguage": "Switch language to Arabic",
+    "backHome": "Back Home"
+  },
+  "badges": {
+    "available": "Available",
+    "offer": "Offer",
+    "soon": "Soon",
+    "payAtClinic": "Pay at Clinic",
+    "onlinePayment": "Online Payment"
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "Family care near you",
+      "title": "Maisam Family Clinic",
+      "subtitle": "Family healthcare with easy booking and flexible payment online or at the clinic."
+    },
+    "quickActions": {
+      "title": "Quick Access",
+      "items": [
+        {
+          "label": "Book Appointment",
+          "route": "booking"
+        },
+        {
+          "label": "Clinic Services",
+          "route": "services"
+        },
+        {
+          "label": "Offers",
+          "route": "offers"
+        },
+        {
+          "label": "Branches",
+          "route": "branches"
+        }
+      ]
+    },
+    "services": {
+      "title": "Our Services",
+      "subtitle": "Core services prepared for expansion in the next phases.",
+      "items": [
+        {
+          "title": "Family Medicine",
+          "description": "Continuous family care and everyday health follow-up.",
+          "badge": "Available"
+        },
+        {
+          "title": "Dentistry",
+          "description": "Initial dental service structure for browsing and booking.",
+          "badge": "Soon"
+        },
+        {
+          "title": "Dermatology & Aesthetics",
+          "description": "A dedicated path for skin and aesthetic care.",
+          "badge": "Soon"
+        },
+        {
+          "title": "Laser",
+          "description": "Future laser services within the Maisam experience.",
+          "badge": "Soon"
+        }
+      ]
+    },
+    "booking": {
+      "title": "How Booking Works",
+      "subtitle": "A simple journey from choosing a service to confirming your appointment.",
+      "steps": [
+        "Choose service and branch",
+        "Select a suitable appointment",
+        "Pay online or at the clinic"
+      ]
+    },
+    "payment": {
+      "title": "Payment Options",
+      "subtitle": "Flexible options for every visitor.",
+      "items": [
+        "Pay online now",
+        "Or pay by cash/card at the clinic"
+      ]
+    },
+    "offers": {
+      "title": "Featured Offers",
+      "subtitle": "A ready area for future campaigns and medical packages.",
+      "items": [
+        {
+          "title": "Family Care Offer",
+          "description": "Temporary offer card prepared for future data."
+        },
+        {
+          "title": "Checkup Package",
+          "description": "Structured placeholder for upcoming offers."
+        }
+      ]
+    },
+    "doctors": {
+      "title": "Featured Doctors",
+      "subtitle": "Initial cards for doctors and specialties in later phases.",
+      "items": [
+        {
+          "name": "Family Doctor",
+          "specialty": "Primary healthcare"
+        },
+        {
+          "name": "Dermatologist",
+          "specialty": "Dermatology and aesthetics"
+        }
+      ]
+    },
+    "branches": {
+      "title": "Our Branches",
+      "subtitle": "A structure ready for branch locations and working hours.",
+      "items": [
+        {
+          "name": "Maisam Main Branch",
+          "description": "Branch details will be added in a later phase."
+        },
+        {
+          "name": "Upcoming Branch",
+          "description": "A dedicated area for future expansion."
+        }
+      ]
+    },
+    "finalCta": {
+      "title": "Book your appointment with Maisam Family Clinic",
+      "subtitle": "Start with one simple step and let our team care for your health journey."
+    }
+  },
+  "pages": {
+    "services": {
+      "title": "Services",
+      "description": "An initial page for clinic services, categories, and service details in upcoming phases.",
+      "status": "Ready to expand"
+    },
+    "offers": {
+      "title": "Offers",
+      "description": "An initial page for medical offers and packages, without backend integration in this phase.",
+      "status": "Placeholder"
+    },
+    "doctors": {
+      "title": "Doctors",
+      "description": "An initial page for Maisam doctors, specialties, and future availability.",
+      "status": "Soon"
+    },
+    "branches": {
+      "title": "Branches",
+      "description": "An initial page for branches, locations, working hours, and contact details.",
+      "status": "Soon"
+    },
+    "booking": {
+      "title": "Book Appointment",
+      "description": "An initial booking flow structure without real logic or backend integration.",
+      "status": "Soon"
+    },
+    "appointments": {
+      "title": "My Appointments",
+      "description": "An initial area for upcoming and previous appointments after accounts are enabled.",
+      "status": "Soon"
+    },
+    "invoices": {
+      "title": "Invoices",
+      "description": "An initial page for invoices and future payment options.",
+      "status": "Soon"
+    },
+    "complaints": {
+      "title": "Complaints and Feedback",
+      "description": "An initial channel for feedback and complaints in upcoming phases.",
+      "status": "Soon"
+    },
+    "profile": {
+      "title": "Account",
+      "description": "An initial page for user details, language preferences, and account settings.",
+      "status": "Soon"
+    },
+    "admin": {
+      "title": "Admin Dashboard",
+      "description": "A placeholder admin structure only, without permissions or data management in this phase.",
+      "status": "Closed for development"
+    }
+  },
+  "footer": {
+    "tagline": "Family healthcare with a smooth digital experience.",
+    "quickLinks": "Quick Links",
+    "rights": "All rights reserved"
+  }
+}
