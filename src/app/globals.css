@@ -278,6 +278,7 @@ select {
   min-height: 74px;
   display: flex;
   align-items: center;
+  gap: 10px;
   border: 1px solid var(--color-border);
   border-radius: var(--radius-card);
   padding: 14px;
@@ -287,15 +288,9 @@ select {
   box-shadow: 0 8px 18px rgba(31, 41, 55, 0.04);
 }
 
-.quickAction::before {
-  content: "";
-  width: 10px;
-  height: 10px;
+.quickActionIcon {
   flex: 0 0 auto;
-  margin-inline-end: 10px;
-  border-radius: 50%;
-  background: var(--color-primary-turquoise);
-  box-shadow: 0 0 0 5px rgba(28, 177, 185, 0.1);
+  color: var(--color-primary-turquoise);
 }
 
 .pageBand {
@@ -636,50 +631,20 @@ select {
   display: grid;
   place-items: center;
   align-content: center;
-  gap: 5px;
+  gap: 4px;
   color: var(--color-muted);
   font-size: 0.72rem;
   font-weight: 800;
   text-align: center;
+  transition: color 180ms ease;
 }
 
-.bottomNavIcon {
-  width: 22px;
-  height: 22px;
-  display: block;
-  border: 2px solid currentColor;
-  border-radius: 6px;
-  position: relative;
-  color: var(--color-primary-turquoise);
-}
-
-.bottomNavIcon-home::before,
-.bottomNavIcon-services::before,
-.bottomNavIcon-booking::before,
-.bottomNavIcon-appointments::before,
-.bottomNavIcon-profile::before {
-  content: "";
-  position: absolute;
-  inset: 5px;
-  background: currentColor;
-  border-radius: 3px;
-}
-
-.bottomNavIcon-booking {
+.bottomNavItemActive {
   color: var(--color-primary-pink);
 }
 
-.bottomNavIcon-booking::before {
-  inset: 4px 8px;
-}
-
-.bottomNavIcon-profile {
-  border-radius: 50%;
-}
-
-.bottomNavIcon-profile::before {
-  inset: 6px;
-  border-radius: 50%;
+.bottomNavIcon {
+  display: block;
 }
 
 @media (min-width: 680px) {

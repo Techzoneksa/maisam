@@ -1,5 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
+import {
+  BadgePercent,
+  CalendarPlus,
+  MapPin,
+  Stethoscope,
+  type LucideIcon,
+} from "lucide-react";
 import type { Locale, Section } from "@/i18n/config";
 import { getPublicPath } from "@/i18n/config";
 import type { Dictionary } from "@/i18n/dictionaries";
@@ -63,15 +70,26 @@ export function HomePage({ dictionary, locale }: HomePageProps) {
         <div className="shell">
           <h2 className="compactTitle">{dictionary.home.quickActions.title}</h2>
           <div className="quickActionsGrid">
-            {dictionary.home.quickActions.items.map((item) => (
-              <Link
-                className="quickAction"
-                href={getPublicPath(locale, item.route as Section)}
-                key={item.route}
-              >
-                <span>{item.label}</span>
-              </Link>
-            ))}
+            {dictionary.home.quickActions.items.map((item) => {
+              const iconMap: Record<string, LucideIcon> = {
+                booking: CalendarPlus,
+                services: Stethoscope,
+                offers: BadgePercent,
+                branches: MapPin,
+              };
+              const Icon = iconMap[item.route] || Stethoscope;
+
+              return (
+                <Link
+                  className="quickAction"
+                  href={getPublicPath(locale, item.route as Section)}
+                  key={item.route}
+                >
+                  <Icon aria-hidden="true" className="quickActionIcon" size={22} strokeWidth={1.8} />
+                  <span>{item.label}</span>
+                </Link>
+              );
+            })}
           </div>
         </div>
       </section>
