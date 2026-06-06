@@ -10,11 +10,13 @@ type LanguageToggleProps = {
 };
 
 function getTargetPath(pathname: string, locale: Locale): string {
+  const cleanPath = pathname.replace(/^\/(en|ar)(?=\/|$)/, "") || "/";
+
   if (locale === "ar") {
-    return pathname === "/" ? "/en" : `/en${pathname}`;
+    return cleanPath === "/" ? "/en" : `/en${cleanPath}`;
   }
 
-  return pathname.replace(/^\/en/, "") || "/";
+  return cleanPath;
 }
 
 export function LanguageToggle({ ariaLabel, locale }: LanguageToggleProps) {
