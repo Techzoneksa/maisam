@@ -246,6 +246,200 @@
       "status": "Closed for development"
     }
   },
+  "pageContent": {
+    "services": {
+      "header": "Our Medical Services",
+      "subheader": "Comprehensive healthcare for the whole family",
+      "categories": [
+        {
+          "title": "Primary Care",
+          "items": [
+            {
+              "title": "Family Medicine",
+              "description": "Continuous primary healthcare for all family members, chronic disease management, and routine checkups.",
+              "badge": "Available",
+              "price": "From 100 SAR"
+            },
+            {
+              "title": "Pediatrics",
+              "description": "Child growth monitoring, essential vaccinations, and treatment of common childhood illnesses.",
+              "badge": "Available",
+              "price": "From 120 SAR"
+            },
+            {
+              "title": "Gynecology",
+              "description": "Women's health consultations, pregnancy follow-up, and routine gynecological exams.",
+              "badge": "Soon",
+              "price": "From 150 SAR"
+            }
+          ]
+        },
+        {
+          "title": "Specialty Services",
+          "items": [
+            {
+              "title": "Dentistry",
+              "description": "Dental checkups, cleaning, fillings, and root canal treatment in a comfortable medical environment.",
+              "badge": "Available",
+              "price": "From 200 SAR"
+            },
+            {
+              "title": "Dermatology & Aesthetics",
+              "description": "Acne treatment, skin concerns, and anti-aging solutions using the latest medical techniques.",
+              "badge": "Available",
+              "price": "From 250 SAR"
+            },
+            {
+              "title": "Laser",
+              "description": "Laser hair removal, skin tone correction, and scar treatment with advanced technology.",
+              "badge": "Soon",
+              "price": "From 300 SAR"
+            }
+          ]
+        },
+        {
+          "title": "Diagnostics & Testing",
+          "items": [
+            {
+              "title": "Lab Tests",
+              "description": "Comprehensive lab testing including blood, urine, and hormone analysis with fast and accurate results.",
+              "badge": "Available",
+              "price": "From 50 SAR"
+            },
+            {
+              "title": "Radiology & Imaging",
+              "description": "X-rays, ultrasound, and echocardiogram using high-precision diagnostic equipment.",
+              "badge": "Soon",
+              "price": "From 200 SAR"
+            },
+            {
+              "title": "Physical Therapy",
+              "description": "Rehabilitation sessions for sports injuries, back pain, and joint issues.",
+              "badge": "Soon",
+              "price": "From 150 SAR"
+            }
+          ]
+        }
+      ]
+    },
+    "offers": {
+      "header": "Offers & Packages",
+      "subheader": "Special packages and offers for your healthcare",
+      "items": [
+        {
+          "title": "Family Package",
+          "description": "A comprehensive package for four family members including periodic checkups, family consultations, and 20% off services.",
+          "badge": "Offer",
+          "price": "899 SAR",
+          "validity": "Valid for 6 months"
+        },
+        {
+          "title": "Full Checkup Offer",
+          "description": "Complete medical checkup including comprehensive lab tests, imaging, and medical consultation at half price.",
+          "badge": "Offer",
+          "price": "399 SAR",
+          "validity": "Valid for 30 days"
+        },
+        {
+          "title": "Skincare Package",
+          "description": "Four skin care sessions including deep cleansing, exfoliation, and moisturizing under medical supervision.",
+          "badge": "Discount",
+          "price": "699 SAR",
+          "validity": "Valid for 3 months"
+        },
+        {
+          "title": "Seasonal Laser Offer",
+          "description": "Six laser sessions for multiple areas with a free consultation and special discount for new members.",
+          "badge": "Discount",
+          "price": "1,499 SAR",
+          "validity": "Valid for 6 months"
+        },
+        {
+          "title": "Dental Care Package",
+          "description": "Comprehensive checkup, deep cleaning, and teeth whitening at a discounted price including reports and X-rays.",
+          "badge": "Offer",
+          "price": "999 SAR",
+          "validity": "Valid for 2 months"
+        }
+      ]
+    },
+    "doctors": {
+      "header": "Our Doctors",
+      "subheader": "A team of specialized doctors for your healthcare",
+      "items": [
+        {
+          "name": "Dr. Ahmed Al-Saeed",
+          "specialty": "Family Medicine",
+          "description": "Family medicine consultant with over 15 years of experience in primary care and family follow-up.",
+          "availability": "Sat - Thu"
+        },
+        {
+          "name": "Dr. Sara Al-Omari",
+          "specialty": "Dermatology & Aesthetics",
+          "description": "Certified dermatologist and aesthetic specialist, experienced in acne and anti-aging treatments.",
+          "availability": "Sun - Wed"
+        },
+        {
+          "name": "Dr. Khaled Al-Yousef",
+          "specialty": "Dentistry",
+          "description": "Cosmetic dentistry and dental implants specialist with 12 years of experience.",
+          "availability": "Sat - Thu"
+        },
+        {
+          "name": "Dr. Noura Al-Harbi",
+          "specialty": "Pediatrics",
+          "description": "Pediatric and neonatology consultant with extensive experience in growth monitoring and vaccinations.",
+          "availability": "Sun - Thu"
+        },
+        {
+          "name": "Dr. Faisal Al-Mutairi",
+          "specialty": "Physical Therapy",
+          "description": "Physical therapy and sports rehabilitation specialist with expertise in sports injuries and spine care.",
+          "availability": "Sat - Wed"
+        },
+        {
+          "name": "Dr. Lami Al-Qahtani",
+          "specialty": "Gynecology",
+          "description": "OB/GYN consultant providing pregnancy follow-up and delivery care with the latest medical standards.",
+          "availability": "Sun - Thu"
+        }
+      ]
+    },
+    "branches": {
+      "header": "Our Branches",
+      "subheader": "Choose the branch nearest to you",
+      "items": [
+        {
+          "name": "Maisam Main Branch - Riyadh",
+          "address": "Al-Nakheel District, Prince Mohammed bin Salman Road, Riyadh",
+          "phone": "+966 11 234 5678",
+          "hours": "Sat - Thu: 9:00 AM - 9:00 PM",
+          "features": ["Parking", "Pharmacy", "Lab", "Emergency", "Cafe"]
+        },
+        {
+          "name": "Maisam Branch - Jeddah",
+          "address": "Al-Shati District, Prince Sultan Road, Jeddah",
+          "phone": "+966 12 345 6789",
+          "hours": "Sat - Thu: 9:00 AM - 11:00 PM",
+          "features": ["Parking", "Pharmacy", "Lab", "Dental Center"]
+        },
+        {
+          "name": "Maisam Branch - Dammam",
+          "address": "Al-Faisaliyah District, King Fahd Road, Dammam",
+          "phone": "+966 13 456 7890",
+          "hours": "Sat - Thu: 9:00 AM - 10:00 PM",
+          "features": ["Parking", "Pharmacy", "Physical Therapy"]
+        },
+        {
+          "name": "Maisam Branch - Makkah",
+          "address": "Opening soon — Al-Aziziyah District, Makkah",
+          "phone": "+966 15 678 9012",
+          "hours": "Coming soon",
+          "features": []
+        }
+      ]
+    }
+  },
   "footer": {
     "tagline": "Family healthcare with a smooth digital experience.",
     "quickLinks": "Quick Links",

@@ -719,3 +719,211 @@ select {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
+
+.serviceCategory {
+  margin-bottom: 32px;
+}
+
+.categoryTitle {
+  margin: 0 0 14px;
+  font-size: 1.2rem;
+}
+
+.serviceCard {
+  display: flex;
+  flex-direction: column;
+}
+
+.serviceCardHead {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.serviceCardIcon {
+  width: 48px;
+  height: 48px;
+  flex: 0 0 auto;
+  display: inline-grid;
+  place-items: center;
+  border-radius: 10px;
+  background: rgba(28, 177, 185, 0.1);
+  color: var(--color-primary-turquoise);
+}
+
+.serviceCard h3 {
+  margin: 14px 0 8px;
+}
+
+.serviceCard p {
+  margin: 0;
+  color: var(--color-muted);
+  line-height: 1.7;
+}
+
+.serviceCardFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: auto;
+  padding-top: 14px;
+}
+
+.servicePrice {
+  font-size: 0.95rem;
+  font-weight: 900;
+  color: var(--color-primary-pink);
+}
+
+.offerCard {
+  display: flex;
+  flex-direction: column;
+}
+
+.offerCardHead {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.offerCardIcon {
+  width: 48px;
+  height: 48px;
+  flex: 0 0 auto;
+  display: inline-grid;
+  place-items: center;
+  border-radius: 10px;
+  background: rgba(216, 35, 148, 0.1);
+  color: var(--color-primary-pink);
+}
+
+.offerCard h3 {
+  margin: 14px 0 8px;
+}
+
+.offerCard p {
+  margin: 0;
+  color: var(--color-muted);
+  line-height: 1.7;
+}
+
+.offerCardMeta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.offerPrice {
+  font-size: 1.2rem;
+  color: var(--color-primary-pink);
+  font-weight: 900;
+}
+
+.offerValidity {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--color-muted);
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+.offerCard .button {
+  margin-top: 14px;
+  width: 100%;
+}
+
+.doctorInfo {
+  flex: 1;
+  min-width: 0;
+}
+
+.doctorAvatarInit {
+  width: 54px;
+  height: 54px;
+  flex: 0 0 auto;
+  display: inline-grid;
+  place-items: center;
+  border-radius: 10px;
+  background: linear-gradient(180deg, rgba(28, 177, 185, 0.85), rgba(28, 177, 185, 0.95));
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 900;
+  letter-spacing: 0.02em;
+}
+
+.doctorSpecialty {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 4px;
+  color: var(--color-primary-turquoise);
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.doctorCard p {
+  margin: 8px 0;
+  font-size: 0.92rem;
+}
+
+.doctorAvailability {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--color-muted);
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+.branchCard {
+  display: flex;
+  flex-direction: column;
+}
+
+.branchCard h3 {
+  margin: 0 0 14px;
+}
+
+.branchDetail {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+  color: var(--color-muted);
+  font-size: 0.92rem;
+  line-height: 1.5;
+}
+
+.branchDetail svg {
+  flex: 0 0 auto;
+  color: var(--color-primary-turquoise);
+}
+
+.branchFeatures {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 10px;
+}
+
+@media (max-width: 679px) {
+  .serviceCardFooter {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .serviceCardFooter .button {
+    width: 100%;
+  }
+
+  .offerCardMeta {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

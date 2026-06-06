@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import { BranchesPage } from "@/components/branches/BranchesPage";
+import { DoctorsPage } from "@/components/doctors/DoctorsPage";
+import { OffersPage } from "@/components/offers/OffersPage";
 import { PagePlaceholder } from "@/components/PagePlaceholder";
+import { ServicesPage } from "@/components/services/ServicesPage";
 import {
   isLocale,
   isSection,
@@ -54,13 +58,22 @@ export async function generateMetadata({
   };
 }
 
+const pageComponents: Partial<Record<Section, typeof PagePlaceholder>> = {
+  services: ServicesPage,
+  offers: OffersPage,
+  doctors: DoctorsPage,
+  branches: BranchesPage,
+};
+
 export default async function SectionPage({ params }: SectionPageProps) {
   const { locale: rawLocale, section: rawSection } = await params;
   const { locale, section } = resolveParams(rawLocale, rawSection);
   const dictionary = getDictionary(locale);
 
+  const PageComponent = pageComponents[section] ?? PagePlaceholder;
+
   return (
-    <PagePlaceholder
+    <PageComponent
       dictionary={dictionary}
       locale={locale}
       section={section}
