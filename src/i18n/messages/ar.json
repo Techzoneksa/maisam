@@ -68,14 +68,46 @@
     "bookAppointment": "احجز موعد",
     "exploreServices": "استعرض الخدمات",
     "switchLanguage": "تغيير اللغة إلى الإنجليزية",
-    "backHome": "العودة للرئيسية"
+    "backHome": "العودة للرئيسية",
+    "details": "التفاصيل",
+    "call": "اتصل",
+    "directions": "الاتجاهات",
+    "bookBranch": "احجز في هذا الفرع",
+    "discount": "خصم"
   },
   "badges": {
     "available": "متاح",
     "offer": "عرض",
     "soon": "قريبًا",
     "payAtClinic": "دفع داخل العيادة",
-    "onlinePayment": "دفع إلكتروني"
+    "onlinePayment": "دفع إلكتروني",
+    "today": "متاح اليوم",
+    "limited": "عرض محدود"
+  },
+  "heroSlider": {
+    "slides": [
+      {
+        "title": "عيادات ميسم لطب الأسرة",
+        "subtitle": "رعاية طبية عائلية قريبة منك",
+        "image": "/images/banners/hero-family-clinic.svg",
+        "cta": "احجز موعد",
+        "route": "booking"
+      },
+      {
+        "title": "خدمات طبية متكاملة لعائلتك",
+        "subtitle": "من الاستشارة إلى المتابعة في تجربة واحدة",
+        "image": "/images/banners/hero-services.svg",
+        "cta": "استعرض الخدمات",
+        "route": "services"
+      },
+      {
+        "title": "ادفع بالطريقة المناسبة لك",
+        "subtitle": "إلكترونيًا أو داخل العيادة",
+        "image": "/images/banners/hero-payment.svg",
+        "cta": "احجز الآن",
+        "route": "booking"
+      }
+    ]
   },
   "home": {
     "hero": {
@@ -111,22 +143,30 @@
         {
           "title": "طب الأسرة",
           "description": "رعاية مستمرة للأسرة ومتابعة للحالات اليومية.",
-          "badge": "متاح"
+          "badge": "متاح",
+          "image": "/images/services/family-medicine.svg",
+          "price": "١٠٠"
         },
         {
           "title": "الأسنان",
           "description": "خدمات أسنان مبدئية للحجز والاستعراض.",
-          "badge": "قريبًا"
+          "badge": "قريبًا",
+          "image": "/images/services/dentistry.svg",
+          "price": "٢٠٠"
         },
         {
           "title": "الجلدية والتجميل",
           "description": "مسار مخصص للعناية بالبشرة والتجميل.",
-          "badge": "قريبًا"
+          "badge": "قريبًا",
+          "image": "/images/services/dermatology.svg",
+          "price": "٢٥٠"
         },
         {
           "title": "الليزر",
           "description": "خدمات ليزر مستقبلية ضمن تجربة عيادات ميسم.",
-          "badge": "قريبًا"
+          "badge": "قريبًا",
+          "image": "/images/services/laser.svg",
+          "price": "٣٠٠"
         }
       ]
     },
@@ -150,6 +190,7 @@
     "offers": {
       "title": "عروض مميزة",
       "subtitle": "مساحة جاهزة لعرض الحملات والباقات الطبية.",
+      "image": "/images/offers/health-package.svg",
       "items": [
         {
           "title": "عرض العناية العائلية",
@@ -166,12 +207,32 @@
       "subtitle": "بطاقات أولية ستعرض الأطباء والتخصصات لاحقًا.",
       "items": [
         {
-          "name": "طبيب الأسرة",
-          "specialty": "رعاية صحية أولية"
+          "name": "د. أحمد السعيد",
+          "specialty": "طب الأسرة",
+          "image": "/images/doctors/doctor-family-female.svg",
+          "available": true,
+          "branch": "الرياض"
         },
         {
-          "name": "طبيبة الجلدية",
-          "specialty": "جلدية وتجميل"
+          "name": "د. سارة العمري",
+          "specialty": "جلدية وتجميل",
+          "image": "/images/doctors/doctor-dermatology-female.svg",
+          "available": true,
+          "branch": "جدة"
+        },
+        {
+          "name": "د. خالد اليوسف",
+          "specialty": "أسنان",
+          "image": "/images/doctors/doctor-dentist-male.svg",
+          "available": false,
+          "branch": "جدة"
+        },
+        {
+          "name": "د. نورة الحربي",
+          "specialty": "أطفال",
+          "image": "/images/doctors/doctor-pediatrics-male.svg",
+          "available": true,
+          "branch": "الرياض"
         }
       ]
     },
@@ -180,18 +241,37 @@
       "subtitle": "هيكل جاهز لإضافة مواقع الفروع وساعات العمل.",
       "items": [
         {
-          "name": "فرع ميسم الرئيسي",
-          "description": "بيانات الفرع ستضاف في مرحلة لاحقة."
+          "name": "فرع ميسم الرئيسي - الرياض",
+          "description": "حي النخيل، الرياض",
+          "image": "/images/branches/branch-main.svg"
         },
         {
-          "name": "فرع قادم",
-          "description": "مساحة مخصصة للتوسع المستقبلي."
+          "name": "فرع ميسم - جدة",
+          "description": "حي الشاطئ، جدة",
+          "image": "/images/branches/branch-salamah.svg"
+        },
+        {
+          "name": "فرع ميسم - الدمام",
+          "description": "حي الفيصلية، الدمام",
+          "image": "/images/branches/branch-safa.svg"
+        },
+        {
+          "name": "فرع ميسم - مكة",
+          "description": "حي العزيزية، مكة المكرمة",
+          "image": "/images/branches/branch-muhammadiyah.svg"
         }
       ]
     },
+    "paymentBanner": {
+      "title": "ادفع بالطريقة المناسبة لك",
+      "subtitle": "إلكترونيًا أو داخل العيادة - الخيار لك.",
+      "image": "/images/ui/payment-banner.svg",
+      "cta": "احجز الآن"
+    },
     "finalCta": {
       "title": "احجز موعدك الآن مع عيادات ميسم",
-      "subtitle": "ابدأ بخطوة بسيطة ودع فريقنا يهتم بتجربتك الصحية."
+      "subtitle": "ابدأ بخطوة بسيطة ودع فريقنا يهتم بتجربتك الصحية.",
+      "image": "/images/ui/cta-banner.svg"
     }
   },
   "pages": {
@@ -258,19 +338,25 @@
               "title": "طب الأسرة",
               "description": "رعاية صحية أولية ومستمرة لجميع أفراد الأسرة، متابعة الأمراض المزمنة والفحوصات الدورية.",
               "badge": "متاح",
-              "price": "من ١٠٠ ريال"
+              "price": "من ١٠٠ ريال",
+              "image": "/images/services/family-medicine.svg",
+              "duration": "٣٠ دقيقة"
             },
             {
               "title": "طب الأطفال",
               "description": "متابعة نمو الأطفال، التطعيمات الأساسية، وعلاج الأمراض الشائعة في مراحل الطفولة.",
               "badge": "متاح",
-              "price": "من ١٢٠ ريال"
+              "price": "من ١٢٠ ريال",
+              "image": "/images/services/pediatrics.svg",
+              "duration": "٣٠ دقيقة"
             },
             {
               "title": "طب النساء",
               "description": "استشارات نسائية، متابعة الحمل، وفحوصات دورية للعناية بصحة المرأة.",
               "badge": "قريبًا",
-              "price": "من ١٥٠ ريال"
+              "price": "من ١٥٠ ريال",
+              "image": "/images/services/general-consultation.svg",
+              "duration": "٤٥ دقيقة"
             }
           ]
         },
@@ -281,19 +367,25 @@
               "title": "الأسنان",
               "description": "فحص الأسنان، تنظيف، حشوات، وعلاج قنوات الجذور في بيئة طبية مريحة.",
               "badge": "متاح",
-              "price": "من ٢٠٠ ريال"
+              "price": "من ٢٠٠ ريال",
+              "image": "/images/services/dentistry.svg",
+              "duration": "٤٥ دقيقة"
             },
             {
               "title": "الجلدية والتجميل",
               "description": "علاج حب الشباب، مشاكل البشرة، والتجاعيد بأحدث التقنيات والإشراف الطبي.",
               "badge": "متاح",
-              "price": "من ٢٥٠ ريال"
+              "price": "من ٢٥٠ ريال",
+              "image": "/images/services/dermatology.svg",
+              "duration": "٣٠ دقيقة"
             },
             {
               "title": "الليزر",
               "description": "جلسات إزالة الشعر بالليزر، توحيد لون البشرة، وعلاج الندبات بتقنيات متطورة.",
               "badge": "قريبًا",
-              "price": "من ٣٠٠ ريال"
+              "price": "من ٣٠٠ ريال",
+              "image": "/images/services/laser.svg",
+              "duration": "٤٥ دقيقة"
             }
           ]
         },
@@ -304,19 +396,25 @@
               "title": "التحاليل الطبية",
               "description": "فحوصات مخبرية شاملة تشمل تحليل الدم، البول، والهرمونات بنتائج دقيقة وسريعة.",
               "badge": "متاح",
-              "price": "من ٥٠ ريال"
+              "price": "من ٥٠ ريال",
+              "image": "/images/services/lab-tests.svg",
+              "duration": "٢٤ ساعة"
             },
             {
               "title": "الأشعة والتصوير",
               "description": "أشعة سينية، تصوير تلفزيوني، وإيكو قلبي بتقنيات عالية الدقة.",
               "badge": "قريبًا",
-              "price": "من ٢٠٠ ريال"
+              "price": "من ٢٠٠ ريال",
+              "image": "/images/services/general-consultation.svg",
+              "duration": "٣٠ دقيقة"
             },
             {
               "title": "العلاج الطبيعي",
               "description": "جلسات علاج طبيعي لتأهيل الإصابات الرياضية، آلام الظهر، والمفاصل.",
               "badge": "قريبًا",
-              "price": "من ١٥٠ ريال"
+              "price": "من ١٥٠ ريال",
+              "image": "/images/services/family-medicine.svg",
+              "duration": "٤٥ دقيقة"
             }
           ]
         }
@@ -325,119 +423,167 @@
     "offers": {
       "header": "العروض والباقات",
       "subheader": "باقات وعروض مميزة لرعايتك الصحية",
-      "items": [
-        {
-          "title": "باقة العائلة",
-          "description": "باقة شاملة لأربعة أفراد تشمل فحوصات دورية، استشارات أسرية، وخصم ٢٠٪ على الخدمات.",
-          "badge": "عرض",
-          "price": "٨٩٩ ريال",
-          "validity": "ساري لمدة ٦ أشهر"
-        },
-        {
-          "title": "عرض الفحص الشامل",
-          "description": "فحص طبي كامل يشمل تحاليل شاملة، أشعة، واستشارة طبية بنصف السعر.",
-          "badge": "عرض",
-          "price": "٣٩٩ ريال",
-          "validity": "ساري لمدة ٣٠ يومًا"
-        },
-        {
-          "title": "باقة العناية بالبشرة",
-          "description": "أربع جلسات عناية بالبشرة تشمل تنظيف عميق، تقشير، وترطيب بإشراف طبي.",
-          "badge": "خصم",
-          "price": "٦٩٩ ريال",
-          "validity": "ساري لمدة ٣ أشهر"
-        },
-        {
-          "title": "عرض الليزر الموسمي",
-          "description": "ست جلسات ليزر لمناطق متعددة مع استشارة مجانية وخصم خاص للمشتركين الجدد.",
-          "badge": "خصم",
-          "price": "١٬٤٩٩ ريال",
-          "validity": "ساري لمدة ٦ أشهر"
-        },
-        {
-          "title": "باقة علاج الأسنان",
-          "description": "فحص شامل، تنظيف عميق، وتبييض الأسنان بسعر مخفض يشمل التقارير والأشعة.",
-          "badge": "عرض",
-          "price": "٩٩٩ ريال",
-          "validity": "ساري لمدة شهرين"
-        }
-      ]
+          "items": [
+            {
+              "title": "باقة العائلة",
+              "description": "باقة شاملة لأربعة أفراد تشمل فحوصات دورية، استشارات أسرية، وخصم ٢٠٪ على الخدمات.",
+              "badge": "عرض",
+              "price": "٨٩٩ ريال",
+              "priceBefore": "١٢٠٠ ريال",
+              "priceAfter": "٨٩٩ ريال",
+              "discount": "٢٥٪",
+              "validity": "ساري لمدة ٦ أشهر",
+              "image": "/images/offers/health-package.svg"
+            },
+            {
+              "title": "عرض الفحص الشامل",
+              "description": "فحص طبي كامل يشمل تحاليل شاملة، أشعة، واستشارة طبية بنصف السعر.",
+              "badge": "عرض",
+              "price": "٣٩٩ ريال",
+              "priceBefore": "٨٠٠ ريال",
+              "priceAfter": "٣٩٩ ريال",
+              "discount": "٥٠٪",
+              "validity": "ساري لمدة ٣٠ يومًا",
+              "image": "/images/offers/family-checkup.svg"
+            },
+            {
+              "title": "باقة العناية بالبشرة",
+              "description": "أربع جلسات عناية بالبشرة تشمل تنظيف عميق، تقشير، وترطيب بإشراف طبي.",
+              "badge": "خصم",
+              "price": "٦٩٩ ريال",
+              "priceBefore": "١٠٠٠ ريال",
+              "priceAfter": "٦٩٩ ريال",
+              "discount": "٣٠٪",
+              "validity": "ساري لمدة ٣ أشهر",
+              "image": "/images/offers/skin-consultation.svg"
+            },
+            {
+              "title": "عرض الليزر الموسمي",
+              "description": "ست جلسات ليزر لمناطق متعددة مع استشارة مجانية وخصم خاص للمشتركين الجدد.",
+              "badge": "خصم",
+              "price": "١٬٤٩٩ ريال",
+              "priceBefore": "٢٤٠٠ ريال",
+              "priceAfter": "١٤٩٩ ريال",
+              "discount": "٣٨٪",
+              "validity": "ساري لمدة ٦ أشهر",
+              "image": "/images/offers/laser-session.svg"
+            },
+            {
+              "title": "باقة علاج الأسنان",
+              "description": "فحص شامل، تنظيف عميق، وتبييض الأسنان بسعر مخفض يشمل التقارير والأشعة.",
+              "badge": "عرض",
+              "price": "٩٩٩ ريال",
+              "priceBefore": "١٥٠٠ ريال",
+              "priceAfter": "٩٩٩ ريال",
+              "discount": "٣٣٪",
+              "validity": "ساري لمدة شهرين",
+              "image": "/images/offers/dental-cleaning.svg"
+            }
+          ]
     },
     "doctors": {
       "header": "أطباؤنا",
       "subheader": "نخبة من الأطباء المتخصصين لرعاية صحتك",
-      "items": [
-        {
-          "name": "د. أحمد السعيد",
-          "specialty": "طب الأسرة",
-          "description": "استشاري طب الأسرة بخبرة تزيد عن ١٥ عامًا في الرعاية الأولية والمتابعة العائلية.",
-          "availability": "السبت - الخميس"
-        },
-        {
-          "name": "د. سارة العمري",
-          "specialty": "الجلدية والتجميل",
-          "description": "أخصائية جلدية وتجميل معتمدة، خبرة في علاج حب الشباب والتجاعيد بأحدث التقنيات.",
-          "availability": "الأحد - الأربعاء"
-        },
-        {
-          "name": "د. خالد اليوسف",
-          "specialty": "الأسنان",
-          "description": "اختصاصي علاج الأسنان التجميلي وزراعة الأسنان بخبرة ١٢ عامًا في المجال.",
-          "availability": "السبت - الخميس"
-        },
-        {
-          "name": "د. نورة الحربي",
-          "specialty": "طب الأطفال",
-          "description": "استشارية أطفال وحديثي ولادة، خبرة واسعة في متابعة النمو والتطور والتطعيمات.",
-          "availability": "الأحد - الخميس"
-        },
-        {
-          "name": "د. فيصل المطيري",
-          "specialty": "العلاج الطبيعي",
-          "description": "أخصائي علاج طبيعي وتأهيل رياضي، خبرة في علاج إصابات الملاعب وآلام العمود الفقري.",
-          "availability": "السبت - الأربعاء"
-        },
-        {
-          "name": "د. لمى القحطاني",
-          "specialty": "طب النساء",
-          "description": "استشارية نساء وولادة، متابعة الحمل والولادة بأحدث المعايير الطبية.",
-          "availability": "الأحد - الخميس"
-        }
-      ]
+          "items": [
+            {
+              "name": "د. أحمد السعيد",
+              "specialty": "طب الأسرة",
+              "description": "استشاري طب الأسرة بخبرة تزيد عن ١٥ عامًا في الرعاية الأولية والمتابعة العائلية.",
+              "availability": "السبت - الخميس",
+              "available": true,
+              "branch": "الفرع الرئيسي - الرياض",
+              "experience": "١٥ سنة",
+              "image": "/images/doctors/doctor-family-female.svg"
+            },
+            {
+              "name": "د. سارة العمري",
+              "specialty": "الجلدية والتجميل",
+              "description": "أخصائية جلدية وتجميل معتمدة، خبرة في علاج حب الشباب والتجاعيد بأحدث التقنيات.",
+              "availability": "الأحد - الأربعاء",
+              "available": true,
+              "branch": "فرع جدة",
+              "experience": "١٠ سنوات",
+              "image": "/images/doctors/doctor-dermatology-female.svg"
+            },
+            {
+              "name": "د. خالد اليوسف",
+              "specialty": "الأسنان",
+              "description": "اختصاصي علاج الأسنان التجميلي وزراعة الأسنان بخبرة ١٢ عامًا في المجال.",
+              "availability": "السبت - الخميس",
+              "available": true,
+              "branch": "فرع جدة",
+              "experience": "١٢ سنة",
+              "image": "/images/doctors/doctor-dentist-male.svg"
+            },
+            {
+              "name": "د. نورة الحربي",
+              "specialty": "طب الأطفال",
+              "description": "استشارية أطفال وحديثي ولادة، خبرة واسعة في متابعة النمو والتطور والتطعيمات.",
+              "availability": "الأحد - الخميس",
+              "available": false,
+              "branch": "الفرع الرئيسي - الرياض",
+              "experience": "٨ سنوات",
+              "image": "/images/doctors/doctor-pediatrics-male.svg"
+            },
+            {
+              "name": "د. فيصل المطيري",
+              "specialty": "العلاج الطبيعي",
+              "description": "أخصائي علاج طبيعي وتأهيل رياضي، خبرة في علاج إصابات الملاعب وآلام العمود الفقري.",
+              "availability": "السبت - الأربعاء",
+              "available": true,
+              "branch": "فرع الدمام",
+              "experience": "٩ سنوات",
+              "image": "/images/doctors/doctor-family-2-female.svg"
+            },
+            {
+              "name": "د. لمى القحطاني",
+              "specialty": "طب النساء",
+              "description": "استشارية نساء وولادة، متابعة الحمل والولادة بأحدث المعايير الطبية.",
+              "availability": "الأحد - الخميس",
+              "available": false,
+              "branch": "الفرع الرئيسي - الرياض",
+              "experience": "١١ سنة",
+              "image": "/images/doctors/doctor-general-male.svg"
+            }
+          ]
     },
     "branches": {
       "header": "فروعنا",
       "subheader": "اختر الفرع الأقرب لك",
-      "items": [
-        {
-          "name": "فرع ميسم الرئيسي - الرياض",
-          "address": "حي النخيل، طريق الأمير محمد بن سلمان، الرياض",
-          "phone": "٠١١٢٣٤٥٦٧٨",
-          "hours": "السبت - الخميس: ٩:٠٠ ص - ٩:٠٠ م",
-          "features": ["موقف سيارات", "صيدلية", "مختبر", "قسم طوارئ", "مقهى"]
-        },
-        {
-          "name": "فرع ميسم - جدة",
-          "address": "حي الشاطئ، طريق الأمير سلطان، جدة",
-          "phone": "٠١٢٣٤٥٦٧٨٩",
-          "hours": "السبت - الخميس: ٩:٠٠ ص - ١١:٠٠ م",
-          "features": ["موقف سيارات", "صيدلية", "مختبر", "قسم أسنان"]
-        },
-        {
-          "name": "فرع ميسم - الدمام",
-          "address": "حي الفيصلية، طريق الملك فهد، الدمام",
-          "phone": "٠١٣٤٥٦٧٨٩٠",
-          "hours": "السبت - الخميس: ٩:٠٠ ص - ١٠:٠٠ م",
-          "features": ["موقف سيارات", "صيدلية", "قسم علاج طبيعي"]
-        },
-        {
-          "name": "فرع ميسم - مكة",
-          "address": "يفتتح قريبًا — حي العزيزية، مكة المكرمة",
-          "phone": "٠١٥٦٧٨٩٠١٢",
-          "hours": "قريبًا",
-          "features": []
-        }
-      ]
+          "items": [
+            {
+              "name": "فرع ميسم الرئيسي - الرياض",
+              "address": "حي النخيل، طريق الأمير محمد بن سلمان، الرياض",
+              "phone": "٠١١٢٣٤٥٦٧٨",
+              "hours": "السبت - الخميس: ٩:٠٠ ص - ٩:٠٠ م",
+              "features": ["موقف سيارات", "صيدلية", "مختبر", "قسم طوارئ", "مقهى"],
+              "image": "/images/branches/branch-main.svg"
+            },
+            {
+              "name": "فرع ميسم - جدة",
+              "address": "حي الشاطئ، طريق الأمير سلطان، جدة",
+              "phone": "٠١٢٣٤٥٦٧٨٩",
+              "hours": "السبت - الخميس: ٩:٠٠ ص - ١١:٠٠ م",
+              "features": ["موقف سيارات", "صيدلية", "مختبر", "قسم أسنان"],
+              "image": "/images/branches/branch-salamah.svg"
+            },
+            {
+              "name": "فرع ميسم - الدمام",
+              "address": "حي الفيصلية، طريق الملك فهد، الدمام",
+              "phone": "٠١٣٤٥٦٧٨٩٠",
+              "hours": "السبت - الخميس: ٩:٠٠ ص - ١٠:٠٠ م",
+              "features": ["موقف سيارات", "صيدلية", "قسم علاج طبيعي"],
+              "image": "/images/branches/branch-safa.svg"
+            },
+            {
+              "name": "فرع ميسم - مكة",
+              "address": "يفتتح قريبًا — حي العزيزية، مكة المكرمة",
+              "phone": "٠١٥٦٧٨٩٠١٢",
+              "hours": "قريبًا",
+              "features": [],
+              "image": "/images/branches/branch-muhammadiyah.svg"
+            }
+          ]
     }
   },
   "footer": {

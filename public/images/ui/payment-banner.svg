@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200" width="400" height="200">
+    <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#1CB1B9"/><stop offset="100%" stop-color="#0d8a91"/></linearGradient>
+      <radialGradient id="uglow" cx="50%" cy="40%" r="60%">
+        <stop offset="0%" stop-color="rgba(255,255,255,0.15)"/>
+        <stop offset="100%" stop-color="rgba(255,255,255,0)"/>
+      </radialGradient>
+    </defs>
+    <rect width="400" height="200" fill="url(#g)" rx="16"/>
+    <rect width="400" height="200" fill="url(#uglow)" rx="16"/>
+    <g transform="translate(150,30) scale(1.6666666666666667)">
+    <path d="M10 20v32l18-10 18 10V20" fill="none" stroke="white" stroke-width="2.5" stroke-linejoin="round"/>
+    <circle cx="18" cy="28" r="3" fill="white" opacity="0.5"/>
+  </g>
+    <text x="200" y="160" text-anchor="middle" font-family="system-ui,sans-serif" font-size="18" font-weight="700" fill="white">Flexible Payment</text>
+  </svg>

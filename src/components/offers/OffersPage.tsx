@@ -1,6 +1,6 @@
+import Image from "next/image";
 import Link from "next/link";
 import {
-  BadgePercent,
   CalendarCheck,
 } from "lucide-react";
 import type { Locale, Section } from "@/i18n/config";
@@ -25,30 +25,44 @@ export function OffersPage({ dictionary, locale }: OffersPageProps) {
           <p>{content.subheader}</p>
         </div>
 
-        <div className="cardsGrid twoColumns">
+        <div className="offersGridNew">
           {content.items.map((offer) => (
-            <article className="infoCard offerCard" key={offer.title}>
-              <div className="offerCardHead">
-                <span className="offerCardIcon">
-                  <BadgePercent size={28} strokeWidth={1.8} />
+            <article className="offerCardNew" key={offer.title}>
+              <div className="offerCardImgWrap">
+                <Image
+                  alt={offer.title}
+                  src={offer.image}
+                  fill
+                  className="offerCardImg"
+                  sizes="(max-width: 680px) 100vw, 50vw"
+                />
+                <span className="offerDiscountTag">
+                  {dictionary.actions.discount} {offer.discount}
                 </span>
-                <span className="badge badgePink">{offer.badge}</span>
               </div>
-              <h3>{offer.title}</h3>
-              <p>{offer.description}</p>
-              <div className="offerCardMeta">
-                <strong className="offerPrice">{offer.price}</strong>
-                <span className="offerValidity">
+              <div className="offerCardBodyNew">
+                <div className="offerCardHead">
+                  <span className="badge badgePink">{offer.badge}</span>
+                </div>
+                <h3>{offer.title}</h3>
+                <p>{offer.description}</p>
+                {offer.priceBefore && offer.priceAfter && (
+                  <div className="offerPricingRow">
+                    <span className="offerPriceOld">{offer.priceBefore}</span>
+                    <span className="offerPriceNew">{offer.priceAfter}</span>
+                  </div>
+                )}
+                <div className="offerMetaRow">
                   <CalendarCheck size={14} strokeWidth={2} />
-                  {offer.validity}
-                </span>
+                  <span>{offer.validity}</span>
+                </div>
+                <Link
+                  className="button buttonPrimary buttonCompact"
+                  href={getPublicPath(locale, "booking" as Section)}
+                >
+                  {dictionary.actions.bookNow}
+                </Link>
               </div>
-              <Link
-                className="button buttonPrimary buttonCompact"
-                href={getPublicPath(locale, "booking" as Section)}
-              >
-                {dictionary.actions.bookNow}
-              </Link>
             </article>
           ))}
         </div>

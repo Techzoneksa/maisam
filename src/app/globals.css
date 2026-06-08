@@ -927,3 +927,563 @@ select {
     align-items: flex-start;
   }
 }
+
+/* ===== Hero Slider ===== */
+.heroSlider {
+  position: relative;
+  width: min(100% - 32px, 1120px);
+  margin: 16px auto 0;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.heroSliderTrack {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16/9;
+  min-height: 220px;
+  max-height: 440px;
+}
+
+.heroSlide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  pointer-events: none;
+}
+
+.heroSlide.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.heroSlideImage {
+  object-fit: cover !important;
+}
+
+.heroSlideOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(0,0,0,0.45), rgba(0,0,0,0.1));
+  z-index: 1;
+}
+
+.heroSlideContent {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 24px;
+  gap: 10px;
+}
+
+.heroSlideTitle {
+  margin: 0;
+  color: #fff;
+  font-size: clamp(1.3rem, 5vw, 2.2rem);
+  line-height: 1.15;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+.heroSlideSubtitle {
+  margin: 0;
+  color: rgba(255,255,255,0.85);
+  font-size: clamp(0.85rem, 2.5vw, 1.1rem);
+  line-height: 1.6;
+  max-width: 480px;
+}
+
+.heroSlideContent .button {
+  width: fit-content;
+}
+
+.heroSliderDots {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+  display: flex;
+  gap: 8px;
+}
+
+.heroDot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 2px solid rgba(255,255,255,0.6);
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.heroDot.active {
+  background: #fff;
+  border-color: #fff;
+}
+
+.heroArrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 3;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255,255,255,0.85);
+  color: var(--color-text);
+  font-size: 1.4rem;
+  cursor: pointer;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+}
+
+.heroArrow:hover { background: #fff; }
+.heroArrowLeft { left: 12px; }
+.heroArrowRight { right: 12px; }
+
+@media (min-width: 680px) {
+  .heroArrow { display: flex; }
+}
+
+/* ===== Home Service Cards ===== */
+.homeServiceGrid {
+  display: grid;
+  gap: 14px;
+}
+
+.homeServiceCard {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  background: #fff;
+  box-shadow: 0 10px 22px rgba(31, 41, 55, 0.05);
+  overflow: hidden;
+}
+
+.homeServiceImageWrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16/9;
+  max-height: 180px;
+  overflow: hidden;
+}
+
+.homeServiceImage { object-fit: cover !important; }
+
+.homeServiceBody {
+  padding: 14px;
+  display: grid;
+  gap: 8px;
+}
+
+.homeServiceBody h3 { margin: 0; font-size: 1.05rem; }
+.homeServiceBody p { margin: 0; color: var(--color-muted); font-size: 0.9rem; line-height: 1.6; }
+
+.homeServiceFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.servicePriceHome {
+  font-weight: 800;
+  color: var(--color-primary-pink);
+  font-size: 1.05rem;
+}
+
+@media (min-width: 680px) { .homeServiceGrid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 960px) { .homeServiceGrid { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+
+/* ===== Home Offer Banner ===== */
+.homeOfferBanner {
+  position: relative;
+  display: block;
+  margin-bottom: 16px;
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  min-height: 160px;
+}
+
+.homeOfferBannerImageWrap { position: absolute; inset: 0; }
+.homeOfferBannerImage { object-fit: cover !important; }
+
+.homeOfferBannerOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(216,35,148,0.7), rgba(28,177,185,0.5));
+}
+
+.homeOfferBannerContent {
+  position: relative;
+  z-index: 1;
+  padding: 28px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.homeOfferBannerContent h3 { margin: 0; color: #fff; font-size: 1.4rem; }
+
+/* ===== Home Doctor Cards ===== */
+.homeDoctorGrid {
+  display: grid;
+  gap: 14px;
+}
+
+.homeDoctorCard {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  background: #fff;
+  box-shadow: 0 10px 22px rgba(31, 41, 55, 0.05);
+  overflow: hidden;
+}
+
+.homeDoctorImageWrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1/1;
+  max-height: 200px;
+  overflow: hidden;
+}
+
+.homeDoctorImage { object-fit: cover !important; }
+
+.homeDoctorBadge {
+  position: absolute;
+  top: 8px;
+  inset-inline-start: 8px;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 800;
+}
+
+.homeDoctorBadge.available { background: rgba(28,177,185,0.9); color: #fff; }
+.homeDoctorBadge.unavailable { background: rgba(102,112,133,0.85); color: #fff; }
+
+.homeDoctorBody {
+  padding: 12px;
+  display: grid;
+  gap: 6px;
+}
+
+.homeDoctorBody h3 { margin: 0; font-size: 1rem; }
+.homeDoctorBody p { margin: 0; color: var(--color-muted); font-size: 0.85rem; }
+
+@media (min-width: 680px) { .homeDoctorGrid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 960px) { .homeDoctorGrid { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+
+/* ===== Home Branch Cards ===== */
+.homeBranchGrid {
+  display: grid;
+  gap: 14px;
+}
+
+.homeBranchCard {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  background: #fff;
+  box-shadow: 0 10px 22px rgba(31, 41, 55, 0.05);
+  overflow: hidden;
+}
+
+.homeBranchImageWrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16/9;
+  max-height: 160px;
+  overflow: hidden;
+}
+
+.homeBranchImage { object-fit: cover !important; }
+
+.homeBranchBody {
+  padding: 14px;
+  display: grid;
+  gap: 8px;
+}
+
+.homeBranchBody h3 { margin: 0; font-size: 1.05rem; }
+.homeBranchBody p { margin: 0; color: var(--color-muted); font-size: 0.9rem; }
+
+@media (min-width: 680px) { .homeBranchGrid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 960px) { .homeBranchGrid { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+
+/* ===== Payment Banner Card ===== */
+.paymentBannerCard {
+  display: grid;
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  background: #fff;
+  box-shadow: 0 10px 22px rgba(31, 41, 55, 0.05);
+}
+
+.paymentBannerImageWrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16/9;
+  max-height: 180px;
+}
+
+.paymentBannerImage { object-fit: cover !important; }
+
+.paymentBannerContent {
+  padding: 18px;
+  display: grid;
+  gap: 10px;
+}
+
+.paymentBannerContent h3 { margin: 0; font-size: 1.2rem; }
+.paymentBannerContent p { margin: 0; color: var(--color-muted); line-height: 1.7; }
+
+@media (min-width: 680px) {
+  .paymentBannerCard {
+    grid-template-columns: minmax(0, 0.8fr) minmax(240px, 1fr);
+    align-items: center;
+  }
+  .paymentBannerImageWrap {
+    aspect-ratio: auto;
+    height: 100%;
+    min-height: 180px;
+  }
+}
+
+/* ===== Services Page - New Cards with Images ===== */
+.serviceCardNew {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  background: #fff;
+  box-shadow: 0 10px 22px rgba(31, 41, 55, 0.05);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.serviceCardImgWrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16/9;
+  max-height: 180px;
+  overflow: hidden;
+}
+
+.serviceCardImg { object-fit: cover !important; }
+
+.serviceCardImgIcon {
+  position: absolute;
+  top: 8px;
+  inset-inline-end: 8px;
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  border-radius: 8px;
+  background: rgba(255,255,255,0.9);
+  color: var(--color-primary-pink);
+}
+
+.serviceCardBodyNew {
+  padding: 14px;
+  display: grid;
+  gap: 8px;
+  flex: 1;
+}
+
+.serviceCardHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.serviceDuration {
+  font-size: 0.78rem;
+  color: var(--color-muted);
+  font-weight: 600;
+}
+
+/* ===== Doctors Page - New Cards with Images ===== */
+.doctorCardsGridNew {
+  display: grid;
+  gap: 16px;
+}
+
+.doctorCardNew {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  background: #fff;
+  box-shadow: 0 10px 22px rgba(31, 41, 55, 0.05);
+  overflow: hidden;
+}
+
+.doctorCardImgWrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3/4;
+  max-height: 280px;
+  overflow: hidden;
+}
+
+.doctorCardImg { object-fit: cover !important; }
+
+.doctorAvailabilityBadge {
+  position: absolute;
+  top: 10px;
+  inset-inline-start: 10px;
+  padding: 5px 12px;
+  border-radius: 6px;
+  font-size: 0.78rem;
+  font-weight: 800;
+}
+
+.doctorAvailabilityBadge.available { background: rgba(28,177,185,0.9); color: #fff; }
+.doctorAvailabilityBadge.unavailable { background: rgba(102,112,133,0.85); color: #fff; }
+
+.doctorCardBodyNew {
+  padding: 14px;
+  display: grid;
+  gap: 6px;
+}
+
+.doctorCardBodyNew h3 { margin: 0; font-size: 1.1rem; }
+
+.doctorMetaInfo {
+  display: flex;
+  gap: 12px;
+  font-size: 0.82rem;
+  color: var(--color-muted);
+  flex-wrap: wrap;
+}
+
+.doctorMetaInfo span {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+@media (min-width: 680px) { .doctorCardsGridNew { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 960px) { .doctorCardsGridNew { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+
+/* ===== Offers Page - New Cards with Images ===== */
+.offersGridNew {
+  display: grid;
+  gap: 16px;
+}
+
+.offerCardNew {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  background: #fff;
+  box-shadow: 0 10px 22px rgba(31, 41, 55, 0.05);
+  overflow: hidden;
+}
+
+.offerCardImgWrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16/9;
+  max-height: 200px;
+  overflow: hidden;
+}
+
+.offerCardImg { object-fit: cover !important; }
+
+.offerDiscountTag {
+  position: absolute;
+  top: 10px;
+  inset-inline-end: 10px;
+  padding: 6px 14px;
+  border-radius: 6px;
+  background: var(--color-primary-pink);
+  color: #fff;
+  font-weight: 800;
+  font-size: 0.85rem;
+}
+
+.offerCardBodyNew {
+  padding: 16px;
+  display: grid;
+  gap: 10px;
+}
+
+.offerCardBodyNew h3 { margin: 0; font-size: 1.15rem; }
+.offerCardBodyNew p { margin: 0; color: var(--color-muted); font-size: 0.9rem; line-height: 1.6; }
+
+.offerPricingRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.offerPriceOld {
+  font-size: 1rem;
+  text-decoration: line-through;
+  color: var(--color-muted);
+}
+
+.offerPriceNew {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--color-primary-pink);
+}
+
+.offerMetaRow {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.82rem;
+  color: var(--color-muted);
+}
+
+@media (min-width: 680px) { .offersGridNew { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+
+/* ===== Branches Page - New Cards with Images ===== */
+.branchesGridNew {
+  display: grid;
+  gap: 16px;
+}
+
+.branchCardNew {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  background: #fff;
+  box-shadow: 0 10px 22px rgba(31, 41, 55, 0.05);
+  overflow: hidden;
+}
+
+.branchCardImgWrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16/9;
+  max-height: 200px;
+  overflow: hidden;
+}
+
+.branchCardImg { object-fit: cover !important; }
+
+.branchCardBodyNew {
+  padding: 16px;
+  display: grid;
+  gap: 10px;
+}
+
+.branchCardBodyNew h3 { margin: 0; font-size: 1.15rem; }
+
+.branchActions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+@media (min-width: 680px) { .branchesGridNew { grid-template-columns: repeat(2, minmax(0, 1fr)); } }

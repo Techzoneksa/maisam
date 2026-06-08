@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import {
   Baby,
@@ -65,25 +66,39 @@ export function ServicesPage({ dictionary, locale }: ServicesPageProps) {
                 const Icon = serviceIconMap[service.title] || fallbackIcon;
 
                 return (
-                  <article className="infoCard serviceCard" key={service.title}>
-                    <div className="serviceCardHead">
-                      <span className="serviceCardIcon">
-                        <Icon size={28} strokeWidth={1.8} />
-                      </span>
-                      <span className={`badge ${service.badge === "متاح" || service.badge === "Available" ? "badgeTurquoise" : "badgePink"}`}>
-                        {service.badge}
-                      </span>
+                  <article className="serviceCardNew" key={service.title}>
+                    <div className="serviceCardImgWrap">
+                      <Image
+                        alt={service.title}
+                        src={service.image}
+                        fill
+                        className="serviceCardImg"
+                        sizes="(max-width: 680px) 100vw, 50vw"
+                      />
+                      <div className="serviceCardImgIcon">
+                        <Icon size={20} strokeWidth={1.8} />
+                      </div>
                     </div>
-                    <h3>{service.title}</h3>
-                    <p>{service.description}</p>
-                    <div className="serviceCardFooter">
-                      <span className="servicePrice">{service.price}</span>
-                      <Link
-                        className="button buttonCompact buttonPrimary"
-                        href={getPublicPath(locale, "booking" as Section)}
-                      >
-                        {dictionary.actions.bookNow}
-                      </Link>
+                    <div className="serviceCardBodyNew">
+                      <div className="serviceCardHead">
+                        <span className={`badge ${service.badge === "متاح" || service.badge === "Available" ? "badgeTurquoise" : "badgePink"}`}>
+                          {service.badge}
+                        </span>
+                        {service.duration && (
+                          <span className="serviceDuration">{service.duration}</span>
+                        )}
+                      </div>
+                      <h3>{service.title}</h3>
+                      <p>{service.description}</p>
+                      <div className="serviceCardFooter">
+                        <span className="servicePrice">{service.price}</span>
+                        <Link
+                          className="button buttonCompact buttonPrimary"
+                          href={getPublicPath(locale, "booking" as Section)}
+                        >
+                          {dictionary.actions.bookNow}
+                        </Link>
+                      </div>
                     </div>
                   </article>
                 );

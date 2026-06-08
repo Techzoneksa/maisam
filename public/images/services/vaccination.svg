@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+    <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#e8c0e0"/><stop offset="100%" stop-color="#8e44ad"/></linearGradient>
+      <radialGradient id="spot" cx="50%" cy="30%" r="70%">
+        <stop offset="0%" stop-color="rgba(255,255,255,0.20)"/>
+        <stop offset="100%" stop-color="rgba(255,255,255,0)"/>
+      </radialGradient>
+    </defs>
+    <rect width="400" height="400" fill="url(#g)" rx="0"/>
+    <rect width="400" height="400" fill="url(#spot)" rx="0"/>
+    <g transform="translate(140,100) scale(2.6666666666666665)">
+    <rect x="26" y="4" width="8" height="24" rx="2" fill="none" stroke="white" stroke-width="2.5"/>
+    <path d="M30 28v12c0 6-4 12-10 12h-4" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="38" y1="8" x2="44" y2="2" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="34" y1="12" x2="40" y2="6" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="36" y1="4" x2="42" y2="10" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+  </g>
+    <text x="200" y="350" text-anchor="middle" font-family="system-ui,sans-serif" font-size="18" font-weight="700" fill="white" opacity="0.7">Vaccination</text>
+  </svg>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+    <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#c0d8e8"/><stop offset="100%" stop-color="#2980b9"/></linearGradient>
+      <radialGradient id="spot" cx="50%" cy="30%" r="70%">
+        <stop offset="0%" stop-color="rgba(255,255,255,0.20)"/>
+        <stop offset="100%" stop-color="rgba(255,255,255,0)"/>
+      </radialGradient>
+    </defs>
+    <rect width="400" height="400" fill="url(#g)" rx="0"/>
+    <rect width="400" height="400" fill="url(#spot)" rx="0"/>
+    <g transform="translate(140,100) scale(2.6666666666666665)">
+    <path d="M22 52l12-20V8h12v24l12 20" fill="none" stroke="white" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+    <line x1="18" y1="52" x2="42" y2="52" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="28" y1="28" x2="32" y2="28" stroke="white" stroke-width="2" stroke-linecap="round"/>
+    <line x1="28" y1="36" x2="32" y2="36" stroke="white" stroke-width="2" stroke-linecap="round"/>
+  </g>
+    <text x="200" y="350" text-anchor="middle" font-family="system-ui,sans-serif" font-size="18" font-weight="700" fill="white" opacity="0.7">Lab Tests</text>
+  </svg>
